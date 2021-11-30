@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Uniting Gamers Backend made with JavaScript, Node.js, Express and MySQL",
   "main": "server.js",
+  "engines": {
+    "node": "14.17.0"
+  },
   "scripts": {
     "start": "node server.js",
     "test": "jest",
