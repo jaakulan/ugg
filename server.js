@@ -1,4 +1,4 @@
-const PORT = 3000;
+const PORT = 5000;
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors")
@@ -66,7 +66,5 @@ const checkToken = (req, res, next) => {
 app.use("/test-html", express.static(__dirname + '/test-HTML'));
 
 // set port to 3000, listen for requests
-app.listen(PORT, () => {
-  console.log("Server is running on port 3000.");
-});
+app.listen(process.env.PORT || 5000)
 
