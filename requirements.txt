@@ -1,0 +1,4 @@
+To install the node_modules folder from package.json:
+- Go to the same directory where package.json is located
+- Run <npm install>
+Then you should be good to go.

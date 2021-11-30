@@ -1,0 +1,45 @@
+{
+  "name": "backend-dev",
+  "version": "1.0.0",
+  "description": "Uniting Gamers Backend made with JavaScript, Node.js, Express and MySQL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest",
+    "test-w": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csc301-fall-2021/team-project-20-uniting-gamers.git"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "express",
+    "mysql"
+  ],
+  "author": "csc301-error_code_404_team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csc301-fall-2021/team-project-20-uniting-gamers/issues"
+  },
+  "homepage": "https://github.com/csc301-fall-2021/team-project-20-uniting-gamers#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "file-type": "^16.5.3",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.3",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.14",
+    "overwatch-stats-api": "^2.1.0",
+    "supertest": "^6.1.6",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "path": "^0.12.7"
+  }
+}

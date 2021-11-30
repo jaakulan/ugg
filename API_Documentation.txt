@@ -1,0 +1,130 @@
+API Documentation
+
+NOTE: We did not have access to a db on the cloud. So we made local dbs to test.
+
+Profile Image Endpoint:
+Can be used without setting up a DB
+/api/images/:username/profile-image
+
+GET: Checks if the user has a profile image stored, sends the file as a download if it does, sends a 404 error if the image doesn’t exist.
+
+POST: The Request sends a file to be the profile image of the user. If the file is not a png or jpg then it returns a 422 Error. Otherwise it stores the image and returns a 200 status code.
+
+DELETE: Checks if the user has a profile image stored, if it does not exist it returns a 404 error, otherwise it sends a 200 status code and deletes the image.
+
+
+Background Image Endpoint:
+Can be used without setting up a DB
+/api/images/:username/background-image
+
+GET: Checks if the user has a background image stored, sends the file as a download if it does, sends a 404 error if the image doesn’t exist.
+
+POST: The Request sends a file to be the background image of the user. If the file is not a png or jpg then it returns a 422 Error. Otherwise it stores the image and returns a 200 status code.
+
+DELETE: Checks if the user has a background image stored, if it does not exist it returns a 404 error, otherwise it sends a 200 status code and deletes the image.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Connections API:
+	'/api/connections/:email'
+HTTP Method: GET
+Gets a single connection based on email
+‘/api/connections’
+HTTP Method: GET
+Gets all connections
+‘api/connections/:email’
+HTTP Method: PULL
+Updates a connection given an email
+‘api/connections/:email’
+HTTP Method: DELETE
+Deletes a connection given an email
+      ‘api/connections/’
+HTTP Method: DELETE
+Delete all connections
+      ‘api/connections/’
+POST 
+Create a new connection   	
+Descriptions Endpoint:
+
+'/api/descriptions/:email' 
+HTTP Method: GET 
+Enter email of user in ‘:email’ spot, to receive description
+
+	'/update-description'
+HTTP Method: PUT
+Example: (serverURL)/api/descriptions/update-description?email=g@g.com&description=hi
+Query email and new descriptions as a string after update-description as such in the example
+
+
+'/add-description'
+HTTP Method: POST
+Example: (serverURL)/api/descriptions/add-description?email=f@g.com&description=hi
+Query a new user’s email and new description into the database
+
+	'/delete/:email'
+HTTP Method: delete
+Delete email of user in ‘:email’ spot, to delete email and description
+
+
+
+
+
+
+
+
+Location Api
+
+
+GET /api/location/:id
+
+Given a specific user, return their location. If the user is not found a 404 will be thrown.
+
+POST /api/location/addLocation
+
+Associate a user to a specific location. Specify the user's id and location in the body of the request. Any errors will throw a 400.
+
+PUT /api/location/updateLocation
+
+Update a user's location based on their id. Specify the user's id and location in the body of the request. If the user does not exist then a new location will not be attached to the user. Use POST requests for that behaviour. Any errors will throw a 400.
+
+DELETE /api/location/removeLocation/:id
+
+Given a user's id, delete the location associated with them. Specify the id you want to delete in the parameters. Any errors will throw a 400.
+
+
+
+
+
+
+
+Games API
+
+Each endpoint is prefixed with the route /api/games
+
+HTTP METHOD route
+Description
+
+GET /api/games/:id
+Get all games info of user with {id}
+POST /api/games/add-game/:id
+Add game info to user with {id}
+PUT /api/games/update-game/:id/:game
+	Update {game} info of user with {id}
+DELETE /api/games/delete-game/:id/:game
+Delete {game} info of user with {id}
+
+
+
+
+
